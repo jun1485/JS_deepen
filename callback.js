@@ -17,3 +17,11 @@ fs.readFile('example.txt', 'utf8', function(err, data) {
   }
   console.log('File contents:', data);
 });
+
+
+// 배열 메소드 콜백 예제
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(function(number) {
+  return number % 2 === 0;
+});
+console.log(evenNumbers); // [2, 4]
