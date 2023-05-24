@@ -25,3 +25,10 @@ const evenNumbers = numbers.filter(function(number) {
   return number % 2 === 0;
 });
 console.log(evenNumbers); // [2, 4]
+
+
+// 비동기 콜백
+setTimeout(function() {
+  console.log('3초가 지났다 !!!');
+}, 3000);
+console.log('setTimeout has been called.');
