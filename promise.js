@@ -13,3 +13,15 @@ const promise = new Promise((resolve, reject) => {
     }
   }, 1000);
 });
+
+// Promise를 사용하여 작업이 완료된 후 실행할 코드를 체인으로 연결 가능.
+// fulfilled 상태가 되었을 때 then 메소드를 이용해 코드 실행,
+// rejected 상태가 되었을 때 catch 메소드를 이용해 코드 실행
+
+promise
+  .then(result => {
+    console.log(result); // "Stuff worked!"
+  })
+  .catch(error => {
+    console.error(error); // Error: "It broke"
+  });
