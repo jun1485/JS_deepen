@@ -25,3 +25,5 @@ promise
   .catch(error => {
     console.error(error); // Error: "It broke"
   });
+
+// async, await 문법도 함께 사용 가능.
