@@ -10,3 +10,18 @@ fs.readFile('file1.txt', 'utf8', function(err, data) {
     console.log('File1 contents:', data);
     fs.readFile('file2.txt', 'utf8', function(err, data) {
       if (err) {
+        console.error('Error reading file2:', err);
+      } else {
+        console.log('File2 contents:', data);
+        fs.readFile('file3.txt', 'utf8', function(err, data) {
+          if (err) {
+            console.error('Error reading file3:', err);
+          } else {
+            console.log('File3 contents:', data);
+            // And so on...
+          }
+        });
+      }
+    });
+  }
+});
