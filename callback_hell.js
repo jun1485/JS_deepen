@@ -35,3 +35,23 @@ fs.readFile('file1.txt', 'utf8', function(err, data) {
 const fs = require('fs');
 const util = require('util');
 const readFile = util.promisify(fs.readFile);
+
+// await 키워드로 Promise가 완료될 때까지 실행을 일시 중단.
+// readFile 호출이 완료되어 결과를 반환할 때까지 기다림.
+// try, catch를 사용하여 readFile 호출에서 발생하는 예외를 처리.
+async function readFiles() {
+    try {
+        const data1 = await readFile('file1.txt', 'utf8');
+        console.log('File1 contents:', data1);
+
+        const data2 = await readFile('file2.txt', 'utf8');
+        console.log('File2 contents:', data2);
+
+        const data3 = await readFile('file3.txt', 'utf8');
+        console.log('File3 contents:', data3);
+    } catch (err) {
+        console.error('Error reading file:', err);
+    }
+}
+
+readFiles();
