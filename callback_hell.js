@@ -53,5 +53,4 @@ async function readFiles() {
         console.error('Error reading file:', err);
     }
 }
-
 readFiles();
