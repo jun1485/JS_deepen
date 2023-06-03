@@ -7,3 +7,6 @@ function outerFunction(outerVariable) {
     console.log('innerVariable:', innerVariable);
   }
 }
+
+const newFunction = outerFunction('outside');
+newFunction('inside');  // logs: outerVariable: outside     // innerVariable: inside
