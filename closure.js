@@ -26,3 +26,8 @@ function createCounter() {
         }
     };
 }
+
+const counter = createCounter();
+counter.increment();
+console.log(counter.getCurrentCount());  // 1
+console.log(counter.count);  // undefined
