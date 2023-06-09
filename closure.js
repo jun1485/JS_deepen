@@ -31,3 +31,11 @@ const counter = createCounter();
 counter.increment();
 console.log(counter.getCurrentCount());  // 1
 console.log(counter.count);  // undefined
+
+
+// 2. 특정한 상태를 가지는 팩토리 함수
+function createAdder(x) {
+    return function(y) {
+        return x + y;
+    };
+}
