@@ -39,3 +39,9 @@ function createAdder(x) {
         return x + y;
     };
 }
+
+const add5 = createAdder(5);
+console.log(add5(2));  // 7
+
+const add10 = createAdder(10);
+console.log(add10(2));  // 12
