@@ -4,7 +4,7 @@
 let x = 'global';
 
 function outer() {
-    let x = 'outer';
+    let x = 'outer'; // let은 블록 스코프를 가짐. 선언된 블록 내에서만 존재.
     
     function inner() {
         let x = 'inner';
